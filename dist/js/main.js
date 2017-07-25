@@ -64,8 +64,6 @@ $(document).ready(function(){
 
         $('.navbar-open').removeClass('navbar-open').addClass('navbar-closed').delay(300).queue(function(){$(this).css('display', 'none').dequeue()});
 
-        $('.pages-open').removeClass('pages-open').addClass('pages-closed').delay(300).queue(function(){$(this).css('display', 'none').dequeue();});
-
         $('.back-button-open').removeClass('back-button-open').addClass('back-button-closed').delay(150).queue(function(){$(this).css('display', 'none').dequeue();});
 
         mainToggle = "open";
@@ -112,8 +110,6 @@ function activatePage() {
         $('.navbar-closed').css('display', 'block').delay(50).queue(function(){
             $(this).removeClass('navbar-closed').addClass('navbar-open').dequeue();
         });
-
-        $('.pages-closed').css('display','block').removeClass('pages-closed').addClass('pages-open');
 
         $('.back-button-closed').css('display','block').delay(100).queue(function(){
             $(this).removeClass('back-button-closed').addClass('back-button-open').dequeue();
