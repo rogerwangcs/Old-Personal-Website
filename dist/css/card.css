@@ -1,0 +1,85 @@
+.card {
+    border-radius: 3px;
+    width: 90vw;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+.card-inner {
+    background-color: black;
+    display: flex;
+}
+.card-inner > .picture {
+
+    background-size: cover;
+    width: 30vw;
+    height: 30vw;
+    background-color: lightgreen;
+    overflow: hidden;
+}
+.card-inner > .content {
+    background-color: white;
+    float: left;
+    width: 60vw;
+}
+
+@media (min-width: 800px) {
+    .card {
+
+    }
+    .card-inner {
+        background-color: pink;
+        float: left;
+    }
+    .card-inner > .picture {
+        width: 300px;
+        height: 300px;
+    }
+    .card-inner > .content {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+
+    }
+    .card-inner {
+        display: block;
+        background-color: lightblue;
+
+    }
+    .card-inner > .picture {
+
+        width: 90vw;
+        height: 200px;
+    }
+    .card-inner > .content {
+        width: 90vw;
+        overflow: auto;
+    }
+}
+
+.card-inner > .boston {
+    background-image: url("/dist/media/Boston%20College%20Tile.png");
+}
+.card-inner > .clindata {
+    background-image: url("/dist/media/Clindata%20Tile.png");
+}
+.card-inner > .campo {
+    background-image: url("/dist/media/Campo%20Tile.png");
+}
+@media (max-width: 600px) {
+    .card-inner > .boston {
+        background-image: url("/dist/media/Boston%20College%20Banner.png");
+    }
+    .card-inner > .clindata {
+        background-image: url("/dist/media/Clindata%20Banner.png");
+    }
+    .card-inner > .campo {
+        background-image: url("/dist/media/Campo%20Banner.png");
+    }
+
+}
+
