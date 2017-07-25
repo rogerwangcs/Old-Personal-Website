@@ -86,7 +86,7 @@
 
 .navbar-open {
     transition: all var(--transition-speed) ease-in-out;
-    transition-property: transform, opacity;
+    transition-property: opacity;
     position: fixed;
     z-index: 10;
     text-align:right;
@@ -96,15 +96,12 @@
 }
 .navbar-closed {
     transition: all var(--transition-speed) ease-in-out;
-    transition-property: transform, opacity;
+    transition-property: opacity;
     position: fixed;
     z-index: 10;
     text-align:right;
 
     width: 100%;
-    opacity: 1;
-
-    transform: translateY(-10vh);
     opacity: 0;
 }
 .navbar-button-open {

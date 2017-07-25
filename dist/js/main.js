@@ -12,7 +12,7 @@ document.onreadystatechange = function () {
     } else if (state == 'complete') {
         $('.loader').removeClass('loader').addClass('loader-closed');
         setTimeout(function() {
-            $('.loader-closed').css({'visibility':'hidden','z-index' : '-10000'});
+            $('.loader-closed').css({'display':'none','z-index' : '-10000'});
         },400);
     }
 }
