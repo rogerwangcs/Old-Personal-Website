@@ -2,9 +2,6 @@ var mainToggle = "open";
 var currentPage = "page5";
 var newPage = "page5";
 
-var isDragging = false;
-var wasDragging = isDragging;
-
 document.onreadystatechange = function () {
     var state = document.readyState;
     if (state == 'interactive') {
@@ -33,8 +30,10 @@ $(document).ready(function(){
         activatePage();
     });
     $(".navbar-button-open").click(function(){
-        pageChange(this.id);
-        activatePage();
+        if("page" + this.id != newPage) {
+            pageChange(this.id);
+            activatePage();
+        }
     });
 
 
@@ -83,7 +82,7 @@ function stopScrolling (e) {
 }
 
 function activatePage() {
-    if(mainToggle == "open" && !wasDragging) {
+    if(mainToggle == "open") {
 
         $('body').css('overflow-y','auto');
         $('body').off('scroll mousewheel touchmove', stopScrolling);
@@ -129,5 +128,4 @@ function pageChange(pageID) {
         window.scrollTo(0, 0);
         $(this).removeClass('page-inner-closed').addClass('page-inner-open').dequeue();
     });
-
 }
