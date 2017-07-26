@@ -1,6 +1,6 @@
 .card {
     border-radius: 3px;
-    width: 90vw;
+    width: 100vw;
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -21,7 +21,7 @@
 .card-inner > .content {
     background-color: white;
     float: left;
-    width: 60vw;
+    width: 70vw;
 }
 
 @media (min-width: 800px) {
@@ -52,11 +52,11 @@
     }
     .card-inner > .picture {
 
-        width: 90vw;
+        width: 100vw;
         height: 200px;
     }
     .card-inner > .content {
-        width: 90vw;
+        width: 100vw;
         overflow: auto;
     }
 }

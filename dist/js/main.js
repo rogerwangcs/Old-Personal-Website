@@ -57,7 +57,7 @@ $(document).ready(function(){
             $(this).removeClass('title-closed').addClass('title-open').dequeue();
         });
 
-        $('.main-nav-closed').css('display', 'block').delay(150).queue(function(){
+        $('.main-nav-closed').css('display', 'block').delay(100).queue(function(){
             $(this).removeClass('main-nav-closed').addClass('main-nav-open').dequeue();
         });
 
