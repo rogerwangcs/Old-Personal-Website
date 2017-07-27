@@ -37,7 +37,7 @@ a {
 .loader {
     transition: all var(--transition-speed) ease-in-out;
     transition-property: transform, opacity;
-    position: relative;
+    position: absolute;
     z-index: 10000;
     width: 100%;
     height: 100%;
@@ -46,7 +46,7 @@ a {
 .loader-closed {
     transition: all var(--transition-speed) ease-in-out;
     transition-property: transform, opacity;
-    position: relative;
+    position: absolute;
     z-index: 10000;
     width: 100%;
     height: 100%;
@@ -166,7 +166,7 @@ a {
     opacity: 0;
 }
 
-.pages-open {
+.pages {
     transition: all var(--transition-speed) ease-in-out;
     transition-property: transform, opacity;
 

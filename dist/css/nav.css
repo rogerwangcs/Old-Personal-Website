@@ -177,8 +177,8 @@
 
     position: fixed;
     z-index: 8;
-    width:100%;
-    height: 100%;
+    width:100vw;
+    height: 100vh;
 }
 .header-bg-closed {
     transition: all var(--transition-speed) ease-in-out;
