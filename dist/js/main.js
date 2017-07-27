@@ -57,7 +57,7 @@ $(document).ready(function(){
             $(this).removeClass('main-nav-closed').addClass('main-nav-open').dequeue();
         });
 
-        $('.navbar-open').removeClass('navbar-open').addClass('navbar-closed').delay(300).queue(function(){$(this).css('display', 'none').dequeue()});
+        $('.navbar-open').delay(300).queue(function(){$(this).css('display', 'none').dequeue()});
 
         $('.back-button-open').removeClass('back-button-open').addClass('back-button-closed').delay(150).queue(function(){$(this).css('display', 'none').dequeue();});
 
@@ -102,9 +102,7 @@ function activatePage() {
             $(this).css('display','none').dequeue();
         });
 
-        $('.navbar-closed').css('display', 'block').delay(50).queue(function(){
-            $(this).removeClass('navbar-closed').addClass('navbar-open').dequeue();
-        });
+        $('.navbar-open').css('display', 'block');
 
 
         $('.back-button-closed').css('display','block').delay(100).queue(function(){
