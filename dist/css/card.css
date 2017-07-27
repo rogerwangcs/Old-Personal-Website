@@ -1,13 +1,12 @@
 .card {
     border-radius: 3px;
-    width: 100vw;
+    width: 90vw;
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 20px;
-
 }
 .card-inner {
-    background-color: black;
+
     display: flex;
 }
 .card-inner > .picture {
@@ -15,13 +14,16 @@
     background-size: cover;
     width: 30vw;
     height: 30vw;
-    background-color: lightgreen;
     overflow: hidden;
+    border-radius: 25px;
+    margin-right: 3vw;
 }
 .card-inner > .content {
-    background-color: white;
     float: left;
-    width: 70vw;
+    width: 57vw;
+}
+.mdl-card__media {
+    background-color: white;
 }
 
 @media (min-width: 800px) {
@@ -29,7 +31,6 @@
 
     }
     .card-inner {
-        background-color: pink;
         float: left;
     }
     .card-inner > .picture {
@@ -47,7 +48,6 @@
     }
     .card-inner {
         display: block;
-        background-color: lightblue;
 
     }
     .card-inner > .picture {

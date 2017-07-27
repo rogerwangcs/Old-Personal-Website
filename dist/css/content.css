@@ -1,0 +1,30 @@
+.social-media-table {
+    width: 80vw;
+    margin: auto;
+}
+.social-media{
+    
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.social-media > img {
+     transition: transform var(--transition-speed) ease-out;
+    width: 19vw;
+}
+.social-media > img:hover {
+    transition: transform var(--transition-speed) ease-out;
+    transform: scale(1.1,1.1);
+    transform-origin: center;
+}
+@media (min-width: 800px){
+    .social-media-table {
+        width: 640px;
+    }
+    .social-media {
+        width: 212px
+    }
+    .social-media > img {
+        width: 150px;
+    }
+}
