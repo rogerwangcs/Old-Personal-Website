@@ -19,15 +19,10 @@ $(document).ready(function(){
     $('body').on('scroll mousewheel touchmove', stopScrolling);
 
     $(".main-button-open").click(function(){
-        $('#' + currentPage).removeClass('page-inner-open').addClass('page-inner-closed').css('display', 'none');
-
-        $('#' + newPage).removeClass('page-inner-open').addClass('page-inner-closed').css('display', 'none');
-
-        currentPage = "page5";
-        newPage = "page5";
-
         pageChange(this.id);
         activatePage();
+        window.scrollTo(0, $("#page" + this.id).offset().top);
+
     });
     $(".navbar-button-open").click(function(){
         if("page" + this.id != newPage) {
@@ -56,6 +51,7 @@ $(document).ready(function(){
         $('.title-closed').css('display', 'block').delay(50).queue(function(){
             $(this).removeClass('title-closed').addClass('title-open').dequeue();
         });
+
 
         $('.main-nav-closed').css('display', 'block').delay(100).queue(function(){
             $(this).removeClass('main-nav-closed').addClass('main-nav-open').dequeue();
@@ -86,7 +82,7 @@ function activatePage() {
 
         $('body').css('overflow-y','auto');
         $('body').off('scroll mousewheel touchmove', stopScrolling);
-        window.scrollTo(0, 0);
+        window.scrollTo(0,0);
 
         $('.header-bg-open').removeClass('header-bg-open').addClass('header-bg-closed');
 
@@ -109,6 +105,7 @@ function activatePage() {
         $('.navbar-closed').css('display', 'block').delay(50).queue(function(){
             $(this).removeClass('navbar-closed').addClass('navbar-open').dequeue();
         });
+
 
         $('.back-button-closed').css('display','block').delay(100).queue(function(){
             $(this).removeClass('back-button-closed').addClass('back-button-open').dequeue();

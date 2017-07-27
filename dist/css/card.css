@@ -25,6 +25,24 @@
 .mdl-card__media {
     background-color: white;
 }
+.mdl-card__title {
+    display: inline-grid;
+}
+.mdl-card__title-text {
+    padding-bottom: 5px;
+    font-family: open-sans, sans-serif;
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: normal;
+    color: black;
+}
+.mdl-card__subtitle-text {
+    font-family: open-sans, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #1d23be;
+}
 
 @media (min-width: 800px) {
     .card {
