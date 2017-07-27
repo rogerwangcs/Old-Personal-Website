@@ -164,7 +164,7 @@ a {
 .pages-closed {
     transition: all var(--transition-speed) ease-in-out;
     transition-property: transform, opacity;
-    position: absolute;
+
 
     transform: translateY(80vh);
     opacity: 0;
@@ -173,28 +173,16 @@ a {
 .pages-open {
     transition: all var(--transition-speed) ease-in-out;
     transition-property: transform, opacity;
-    position: absolute;
+
 
     transform: translateY(0vh);
     opacity: 1;
 }
 
-.page-inner-open {
+.page-inner {
     transition: all 0.2s ease-in-out;
     transition-property: transform, opacity;
     transform: translateY(80px);
     opacity: 1;
-
-    position: absolute;
-    width: 100vw;
-}
-.page-inner-closed {
-    transition: all 0.2s ease-in-out;
-    transition-property: transform, opacity;
-    transform: translateY(100px);
-    opacity: 0;
-    display: none;
-
-    position: absolute;
     width: 100vw;
 }
