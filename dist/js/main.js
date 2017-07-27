@@ -117,15 +117,7 @@ function activatePage() {
     }
 }
 function pageChange(pageID) {
-    currentPage = newPage;
-    newPage = "page" + pageID;
-
-    $('#' + currentPage).removeClass('page-inner-open').addClass('page-inner-closed').delay(300).queue(function(){
-        $(this).css('display', 'none').dequeue();
-    });
-
-    $('#' + newPage).css('display','block').delay(200).queue(function(){
-        window.scrollTo(0, 0);
-        $(this).removeClass('page-inner-closed').addClass('page-inner-open').dequeue();
-    });
+    $('html, body').animate({
+        scrollTop: $("#page" + pageID).offset().top -100
+    }, 400);
 }
