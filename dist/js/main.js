@@ -9,8 +9,8 @@ document.onreadystatechange = function () {
     } else if (state == 'complete') {
         $('.loader').removeClass('loader').addClass('loader-closed');
         setTimeout(function() {
-            $('.loader-closed').css({'display':'none','z-index' : '-10000'});
-        },400);
+            $('.loader-closed').css({'display':'block','z-index' : '-10000'});
+        },500);
     }
 }
 
