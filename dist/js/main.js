@@ -19,9 +19,8 @@ $(document).ready(function(){
     $('body').on('scroll mousewheel touchmove', stopScrolling);
 
     $(".main-button-open").click(function(){
-        pageChange(this.id);
         activatePage();
-        window.scrollTo(0, $("#page" + this.id).offset().top);
+        window.scrollTo(0, $("#page" + this.id).offset().top -75);
 
     });
     $(".navbar-button-open").click(function(){

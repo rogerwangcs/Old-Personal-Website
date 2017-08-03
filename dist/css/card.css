@@ -31,17 +31,23 @@
 .mdl-card__title-text {
     padding-bottom: 5px;
     font-family: open-sans, sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 22px;
     font-weight: normal;
     color: black;
 }
 .mdl-card__subtitle-text {
     font-family: open-sans, sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 22px;
     font-weight: normal;
     color: #1d23be;
+}
+.page-header {
+    margin: auto;
+}
+.page-header > h2 {
+    font-size: 28px;
 }
 
 @media (min-width: 960px) {
