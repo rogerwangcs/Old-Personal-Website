@@ -8,7 +8,10 @@ body {
     overflow-x:hidden;
     height: 100%;
     background-color: white;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
@@ -35,8 +38,14 @@ a {
 }
 
 .loader {
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     position: absolute;
     z-index: 10000;
     width: 100%;
@@ -44,8 +53,14 @@ a {
     background-color: rgb(59, 77, 175);
 }
 .loader-closed {
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     position: absolute;
     z-index: 10000;
     width: 100%;
@@ -65,10 +80,17 @@ a {
 
 .portrait-open {
     will-change: transform, opacity;
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     background: url("/dist/media/Body_Shot%20small.jpg") no-repeat;
-    background-size: 105%;
+    -webkit-background-size: 105% 105%;
+            background-size: 105%;
     position: fixed;
     z-index: 20;
 
@@ -82,14 +104,22 @@ a {
     top: 3vh;
 
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.66);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.66);
 }
 .portrait-closed {
     will-change: transform, opacity;
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     background: url("/dist/media/Body_Shot%20small.jpg") no-repeat;
-    background-size: 105%;
+    -webkit-background-size: 105% 105%;
+            background-size: 105%;
     position: fixed;
     z-index: 20;
 
@@ -101,15 +131,24 @@ a {
     right: 0;
     left: 0;
     top: 3vh;
-    transform: translateY(-30vh);
+    -webkit-transform: translateY(-30vh);
+        -ms-transform: translateY(-30vh);
+            transform: translateY(-30vh);
     opacity: 0;
 
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.66);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.66);
 }
 .title-open {
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     position: fixed;
     z-index: 30;
     color: white;
@@ -118,8 +157,14 @@ a {
     text-align: center;
 }
 .title-closed {
+    -webkit-transition: all -webkit-calc(var(--transition-speed)/2) ease-in-out;
+    -o-transition: all calc(var(--transition-speed)/2) ease-in-out;
     transition: all calc(var(--transition-speed)/2) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     position: fixed;
     z-index: 30;
     color: white;
@@ -129,7 +174,9 @@ a {
     text-align: center;
 
     opacity: 0;
-    transform: translateY(-20vh);
+    -webkit-transform: translateY(-20vh);
+        -ms-transform: translateY(-20vh);
+            transform: translateY(-20vh);
 }
 @media (max-width: 600px){
     .title {
@@ -141,10 +188,15 @@ a {
 }
 .background-open {
     will-change: transform, opacity;
+    -webkit-transition: opacity var(--transition-speed) ease-in-out;
+    -o-transition: opacity var(--transition-speed) ease-in-out;
     transition: opacity var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
     transition-property: opacity;
     background: url("/dist/media/Phone-Background%20small%20gradient.png") 0% no-repeat;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -152,10 +204,15 @@ a {
 }
 .background-closed {
     will-change: transform, opacity;
+    -webkit-transition: opacity -webkit-calc(var(--transition-speed)/2) ease-in-out;
+    -o-transition: opacity calc(var(--transition-speed)/2) ease-in-out;
     transition: opacity calc(var(--transition-speed)/2) ease-in-out;
+    -webkit-transition-property: opacity;
+    -o-transition-property: opacity;
     transition-property: opacity;
     background: url("/dist/media/Phone-Background%20small%20gradient.png") 0% no-repeat;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -165,17 +222,37 @@ a {
 }
 
 .pages {
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
 
 
-    transform: translateY(0vh);
+    -webkit-transform: translateY(0vh);
+
+
+        -ms-transform: translateY(0vh);
+
+
+            transform: translateY(0vh);
     opacity: 1;
 }
 .page-inner {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
-    transform: translateY(80px);
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform: translateY(80px);
+        -ms-transform: translateY(80px);
+            transform: translateY(80px);
     opacity: 1;
     width: 100vw;
 }

@@ -7,11 +7,19 @@
 }
 .card-inner {
 
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
     display: flex;
 }
 .card-inner > .picture {
 
-    background-size: cover;
+    -webkit-background-size: cover;
+
+            background-size: cover;
     width: 30vw;
     height: 30vw;
     overflow: hidden;
@@ -106,4 +114,119 @@
     }
 
 }
+.card {
+    border-radius: 3px;
+    width: 90vw;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.card-inner {
 
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -ms-flexbox;
+
+    display: flex;
+}
+.card-inner > .picture {
+
+    -webkit-background-size: cover;
+
+            background-size: cover;
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-right: 3vw;
+}
+.card-inner > .content {
+    float: left;
+    width: 57vw;
+}
+.mdl-card__media {
+    background-color: white;
+}
+.mdl-card__title {
+    display: inline-grid;
+}
+.mdl-card__title-text {
+    padding-bottom: 5px;
+    font-family: open-sans, sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: normal;
+    color: black;
+}
+.mdl-card__subtitle-text {
+    font-family: open-sans, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #1d23be;
+}
+.page-header {
+    margin: auto;
+}
+.page-header > h2 {
+    font-size: 28px;
+}
+
+@media (min-width: 960px) {
+    .card {
+
+    }
+    .card-inner {
+        float: left;
+    }
+    .card-inner > .picture {
+        width: 300px;
+        height: 300px;
+    }
+    .card-inner > .content {
+        width: 660px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+
+    }
+    .card-inner {
+        display: block;
+
+    }
+    .card-inner > .picture {
+
+        width: 90vw;
+        height: 200px;
+    }
+    .card-inner > .content {
+        width: 90vw;
+        overflow: auto;
+    }
+}
+
+.card-inner > .boston {
+    background-image: url("/dist/media/Boston%20College%20Tile.png");
+}
+.card-inner > .clindata {
+    background-image: url("/dist/media/Clindata%20Tile.png");
+}
+.card-inner > .campo {
+    background-image: url("/dist/media/Campo%20Tile.png");
+}
+@media (max-width: 600px) {
+    .card-inner > .boston {
+        background-image: url("/dist/media/Boston%20College%20Banner.png");
+    }
+    .card-inner > .clindata {
+        background-image: url("/dist/media/Clindata%20Banner.png");
+    }
+    .card-inner > .campo {
+        background-image: url("/dist/media/Campo%20Banner.png");
+    }
+
+}
