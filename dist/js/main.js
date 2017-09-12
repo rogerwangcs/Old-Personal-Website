@@ -14,6 +14,7 @@ document.onreadystatechange = function () {
     }
 }
 
+
 $(document).ready(function(){
 
     $('body').on('scroll mousewheel touchmove', stopScrolling);
