@@ -1,6 +1,12 @@
 .main-nav-open {
+    -webkit-transition: all -webkit-calc(var(--transition-speed)/2) ease-in-out;
+    -o-transition: all calc(var(--transition-speed)/2) ease-in-out;
     transition: all calc(var(--transition-speed)/2) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     top: 60vh;
     left: 15px;
     position: fixed;
@@ -9,11 +15,19 @@
     margin: auto;
     width: 100%;
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
 }
 .main-nav-closed {
+    -webkit-transition: all -webkit-calc(var(--transition-speed)/2) ease-in-out;
+    -o-transition: all calc(var(--transition-speed)/2) ease-in-out;
     transition: all calc(var(--transition-speed)/2) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     top: 60vh;
     left: 15px;
     position: fixed;
@@ -22,7 +36,9 @@
     margin: auto;
     width: 100%;
     opacity: 0;
-    transform: translateY(-30vh);
+    -webkit-transform: translateY(-30vh);
+        -ms-transform: translateY(-30vh);
+            transform: translateY(-30vh);
 }
 .main-button-open {
     position: relative;
@@ -44,13 +60,17 @@
     border-radius: 15px;
 }
 .main-button-open > img {
-    transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+            transform: translateY(15px);
     width: 10vw;
 }
 .main-button-open > h6 {
     position: relative;
     top: 12vw;
-    transform: translateY(-12vw);  
+    -webkit-transform: translateY(-12vw);
+        -ms-transform: translateY(-12vw);
+            transform: translateY(-12vw);  
 }
 @media (min-width: 800px) {
     .main-button-open {
@@ -79,7 +99,9 @@
         font-size: 12px;
         position: relative;
         top: 10vw;
-        transform: translateY(-12vw);  
+        -webkit-transform: translateY(-12vw);
+            -ms-transform: translateY(-12vw);
+                transform: translateY(-12vw);  
     }
 }
 
@@ -123,7 +145,9 @@
     }
     .navbar-button-open > img {
         width: 35px;
-        transform: translateY(12px);
+        -webkit-transform: translateY(12px);
+            -ms-transform: translateY(12px);
+                transform: translateY(12px);
     }
 }
 
@@ -131,17 +155,31 @@
 .back-button-closed {
     position: fixed;
     z-index: 6;
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
-    transform: translateX(-50px);
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+            transform: translateX(-50px);
     opacity: 0;
     color: white;
 }
 .back-button-open {
     position: fixed;
     z-index: 6;
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
     opacity: 1;
     color: white;
 
@@ -162,7 +200,8 @@
     top: 0;
     width:100%;
     height:64px;
-    box-shadow:  0 0 20px 3px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow:  0 0 20px 3px rgba(0, 0, 0, 0.6);
+            box-shadow:  0 0 20px 3px rgba(0, 0, 0, 0.6);
 }
 @media(max-width: 600px){
     .navbar-bg{
@@ -170,9 +209,17 @@
     }
 }
 .header-bg-open {
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
-    transform-origin: 0% 0%;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
     background-color: rgb(59, 77, 175);
 
     position: fixed;
@@ -181,14 +228,25 @@
     height: 100vh;
 }
 .header-bg-closed {
+    -webkit-transition: all var(--transition-speed) ease-in-out;
+    -o-transition: all var(--transition-speed) ease-in-out;
     transition: all var(--transition-speed) ease-in-out;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    -o-transition-property: transform, opacity;
     transition-property: transform, opacity;
-    transform-origin: 0% 0%;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
     background-color: rgb(59, 77, 175);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.49);
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.49);
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.49);
     z-index: 8;
     position: fixed;
     width:100%;
     height: 100%;
-    transform: scale(1,0);
+    -webkit-transform: scale(1,0);
+        -ms-transform: scale(1,0);
+            transform: scale(1,0);
 }
